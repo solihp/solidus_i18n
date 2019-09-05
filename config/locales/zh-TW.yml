@@ -46,7 +46,7 @@ zh-TW:
         coupon_code: "優惠代碼"
         created_at: "訂單日期"
         email: "電子信箱"
-        ip_address: IP 位址
+        ip_address: "IP 位址"
         item_total: "項目總計"
         number: "訂單號碼"
         payment_state: "付款狀態"
@@ -137,7 +137,7 @@ zh-TW:
       spree/taxonomy:
         name: "名稱"
       spree/user:
-        email: Email
+        email: "電子郵件"
         password: "密碼"
         password_confirmation: "確認密碼"
       spree/variant:
@@ -202,7 +202,7 @@ zh-TW:
       spree/address: "地址"
       spree/country: "國家"
       spree/credit_card: "信用卡"
-      spree/customer_return:
+      spree/customer_return: "顧客退回"
       spree/inventory_unit: "庫存單位"
       spree/line_item:
         one: "單項"
@@ -214,25 +214,25 @@ zh-TW:
       spree/payment_method:
       spree/product: "產品"
       spree/promotion: "促銷"
-      spree/promotion_category:
+      spree/promotion_category: "促銷類別"
       spree/property: "屬性"
       spree/prototype: "原型"
       spree/refund_reason:
       spree/reimbursement:
       spree/reimbursement_type:
       spree/return_authorization:
-        one: "返回授權"
-        other: "返回授權"
+        one: "退回授權"
+        other: "退回授權"
       spree/return_authorization_reason:
       spree/role: "角色"
       spree/shipment: "貨運"
       spree/shipping_category: "貨運類別"
-      spree/shipping_method:
+      spree/shipping_method: "運送方式"
       spree/state: "州/省"
       spree/state_change:
-      spree/stock_location:
-      spree/stock_movement:
-      spree/stock_transfer:
+      spree/stock_location: "倉庫位置"
+      spree/stock_movement: "庫存轉讓"
+      spree/stock_transfer: "庫存轉移"
       spree/tax_category: "稅金類別"
       spree/tax_rate: "稅率"
       spree/taxon: "分類"
@@ -241,7 +241,58 @@ zh-TW:
       spree/user: "使用者"
       spree/variant: "型號"
       spree/zone: "區域"
+  devise:
+    confirmations:
+      confirmed: "您的帳號已驗證成功. 現已登入."
+      send_instructions: "您將在幾分鐘內收到一封說明如何驗證帳號的電子郵件."
+    failure:
+      inactive: "您的帳號尚未啓用."
+      invalid: "錯誤的帳號或者密碼."
+      invalid_token: "不正確的認證辨識碼."
+      locked: "您的帳號已被鎖定."
+      timeout: "您的連線已過期, 請重新登入."
+      unauthenticated: "您必須先登入或者註冊."
+      unconfirmed: "您必須先驗證帳號才能繼續."
+    mailer:
+      confirmation_instructions:
+        subject: "驗證說明"
+      reset_password_instructions:
+        subject: "重設密碼說明"
+      unlock_instructions:
+        subject: "帳號解鎖說明"
+    oauth_callbacks:
+      failure: "由於%{reason}, 您無法從%{kind} 獲得授權."
+      success: "成功從%{kind} 帳號取得授權."
+    unlocks:
+      send_instructions: "您將在數分鐘內收到一封說明如何解鎖帳號的電子郵件."
+      unlocked: "您的帳號已成功解鎖. 現已登入."
+    user_passwords:
+      user:
+        cannot_be_blank: "密碼不能空白."
+        send_instructions: "您將在數分鐘內收到一封說明如何重設密碼的電子郵件."
+        updated: "密碼變更成功, 現已登入."
+    user_registrations:
+      destroyed: "再會! 您的帳號已註銷, 希望您再度造訪."
+      inactive_signed_up: "您已註冊成功. 但由於您的帳號%{reason}, 故無法登入."
+      signed_up: "歡迎! 您已註冊成功."
+      updated: "您的帳號已更新成功."
+    user_sessions:
+      signed_in: "登入成功."
+      signed_out: "登出成功."
+  errors:
+    messages:
+      already_confirmed: "已驗證"
+      not_found: "找不到"
+      not_locked: "未鎖定"
+      not_saved: "在儲存%{resource}時遭遇%{count} 個錯誤"
   spree:
+    variant_properties: "品項屬性"
+    manage_stock: "庫存管理"
+    adjustment_labels:
+      tax_rates:
+        sales_tax_with_rate: "營業稅"
+        including_tax: '%{name}%{amount} (售價內含)'
+        excluding_tax: '%{name}%{amount}'
     abbreviation: "縮寫"
     accept:
     acceptance_errors:
@@ -255,6 +306,7 @@ zh-TW:
       continue: "繼續"
       create: "建立"
       destroy: "刪除"
+      delete: "刪除"
       edit: "編輯"
       list: "列表"
       listing: "列出中"
@@ -267,7 +319,7 @@ zh-TW:
     add: "增加"
     add_action_of_type: "增加促銷優惠"
     add_country: "增加國家"
-    add_coupon_code:
+    add_coupon_code: "新增折扣代碼"
     add_new_header: "增加新 Header"
     add_new_style: "增加新樣式"
     add_one: "新增"
@@ -290,6 +342,19 @@ zh-TW:
     adjustment_successfully_opened: "其他項目已成功啓用!"
     adjustment_total: "其他項目總計"
     adjustments: "其他項目"
+    shipment_number: "出貨單號"
+    create_one: "新增"
+    no_resource: "無資料"
+    admin_login: "管理後台登入"
+    adjustable: "可調整的"
+    adjustment: "調整"
+    adjustment_amount: "調整金額"
+    adjustment_successfully_closed: Adjustment 成功被關閉!
+    adjustment_successfully_opened: Adjustment 成功被開啟!
+    adjustment_total: "總調整"
+    adjustments: "調整"
+    add_taxon: "新增分類"
+    backorderable_header: "可訂購標題"
     admin:
       tab:
         configuration: "設定"
@@ -304,15 +369,51 @@ zh-TW:
         taxonomies:
         taxons:
         users: "使用者"
+        locales: "語系"
+        settings: "系統設定"
+        stock: "庫存管理"
+        general: "一般"
+        payments: "金流"
+        areas: "區域"
+        taxes: "稅率"
+        checkout: "結帳"
+        shipping: "物流"
+        option_types: "選項類型"
+        properties: "屬性"
+        taxonomies: "分類"
+        display_order: "顯示排序"
+        stock_items: "庫存品項"
+        stock_transfers: "轉移庫存"
+        rma: "退回商品授權"
       user:
-        account:
-        addresses:
-        items:
-        items_purchased:
-        order_history:
-        order_num:
-        orders:
-        user_information:
+        account: "帳號"
+        addresses: "地址"
+        items: "品項"
+        items_purchased: "消費品項"
+        order_history: "訂單記錄"
+        order_num: "訂單編號"
+        orders: "訂單"
+        user_information: "會員資訊"
+        store_credit: "商店額度"
+      images:
+        index:
+          upload_images: "上傳圖片"
+          choose_files: "選取檔案"
+          drag_and_drop: "拖曳"
+      variants:
+        new:
+          new_variant: "新品項"
+        form:
+          pricing_hint: "價格提示"
+      prices:
+        any_country: "任何國家"
+        index:
+          amount_greater_than: "總價大於"
+          amount_less_than: "總價小於"
+          new_price: "新增價格"
+      taxons:
+        display_order: "顯示排序"
+    choose_a_taxon_to_sort_products_for: "選擇一個分類對商品進行分類"
     administration: "管理介面"
     advertise:
     agree_to_privacy_policy: "同意隱私條款"
@@ -320,7 +421,7 @@ zh-TW:
     all: "全部"
     all_adjustments_closed: "所有調整項目已成功停用!"
     all_adjustments_opened: "所有調整項目已成功啓用!"
-    all_departments: "所有部門"
+    all_departments: "所有範圍"
     all_items_have_been_returned:
     allow_ssl_in_development_and_test: "允許在 Development / Test 模式下使用SSL"
     allow_ssl_in_production: "允許在 Production 模式下使用SSL"
@@ -354,9 +455,12 @@ zh-TW:
     back_end: "後端"
     back_to_payment:
     back_to_resource_list:
-    back_to_rma_reason_list:
+    back_to_rma_reason_list: "返回RMA原因列表"
     back_to_store: "回商店"
     back_to_users_list: "返回使用者列表"
+    back_to_taxonomies_list: "返回分類列表"
+    back_to_stock_locations_list: "返回倉庫位列表"
+    no_option_values_on_product_html: "商品html中無選項資料"
     backorderable: "可預購"
     backorderable_default:
     backordered: "待補"
@@ -374,6 +478,12 @@ zh-TW:
     cancel: "取消"
     canceled_at:
     canceler:
+    cancel_inventory: "取消庫存"
+    cancellation: "取消完成"
+    unfinalize_all_adjustments: "取消所有調整"
+    finalize_all_adjustments: "完成所有調整"
+    all_adjustments_finalized: "所有調整已完成"
+    all_adjustments_unfinalized: "所有調整未完成"
     cannot_create_customer_returns:
     cannot_create_payment_without_payment_methods: "你無法在未定義付費方法前產生訂單的付費資訊."
     cannot_create_returns: "無法建立退貨資訊, 因為這筆訂單不需要配送"
@@ -449,7 +559,7 @@ zh-TW:
     credit_card: "信用卡"
     credit_cards: "信用卡"
     credit_owed: "負債"
-    credits:
+    credits: "額度"
     currency: "幣別"
     currency_decimal_mark: "幣別小數點符號"
     currency_settings: "幣別設定"
@@ -518,7 +628,7 @@ zh-TW:
         no_user_or_email_specified:
         no_user_specified:
         not_first_order:
-    email: Email
+    email: "電子郵件"
     empty: "空"
     empty_cart: "清空購物車"
     enable_mail_delivery: "啟用 Email 寄送功能"
@@ -560,6 +670,7 @@ zh-TW:
     filename: "檔案名稱"
     fill_in_customer_info: "請填寫消費者資訊"
     filter_results: "過濾結果"
+    filter: "過濾"
     finalize: "完成"
     finalized:
     find_a_taxon:
@@ -591,6 +702,7 @@ zh-TW:
       language: "語言"
       localization_settings: "在地化設定"
       this_file_language: "中文 (繁體)"
+      locales_displayed_on_frontend_select_box: "前台語系顯示"
     icon: "圖示"
     identifier:
     image: "圖片"
@@ -604,7 +716,7 @@ zh-TW:
     incomplete:
     info_number_of_skus_not_shown:
     info_product_has_multiple_skus:
-    instructions_to_reset_password: "請填寫如下表格來重置你的密碼，重置後的密碼會通過電子郵件發送給您"
+    instructions_to_reset_password: "請填寫如下表格來重設你的密碼，重設後的密碼會通過電子郵件發送給您"
     insufficient_stock: "庫存不足，當前還剩下 %{on_hand} 件庫存"
     insufficient_stock_lines_present:
     intercept_email_address: "攔截電郵地址"
@@ -631,7 +743,7 @@ zh-TW:
         lt:
         lte:
     items_cannot_be_shipped: "我們無法遞送物品至您的運送地址. 請選擇其他運送位置."
-    items_in_rmas:
+    items_in_rmas: "=待翻譯="
     items_reimbursed:
     items_to_be_reimbursed:
     jirafe: Jirafe
@@ -641,7 +753,7 @@ zh-TW:
     last_name_begins_with: "姓氏開頭"
     learn_more: Learn More
     lifetime_stats:
-    line_item_adjustments:
+    line_item_adjustments: "品項調整"
     list: "列表"
     loading: "載入中"
     locale_changed: "語系已變更"
@@ -685,9 +797,10 @@ zh-TW:
     name_or_sku: "商品名稱或編號"
     new: "新增"
     new_adjustment: "新增訂單項目"
-    new_country:
+    new_adjustment_reason: "新增調整原因"
+    new_country: "新國家"
     new_customer: "新增客戶"
-    new_customer_return:
+    new_customer_return: "新增客戶退回(貨)"
     new_image: "新增圖片"
     new_option_type: "新增商品選項類型"
     new_order: "新增訂單"
@@ -699,10 +812,10 @@ zh-TW:
     new_promotion_category:
     new_property: "新增商品屬性"
     new_prototype: "新增商品原型"
-    new_refund:
-    new_refund_reason:
+    new_refund: "新增退貨"
+    new_refund_reason: "新增退貨原因"
     new_return_authorization: "新增退貨資料"
-    new_rma_reason:
+    new_rma_reason: "新增RMA退貨原因"
     new_shipment_at_location:
     new_shipping_category: "新增出貨類型"
     new_shipping_method: "新增出貨方式"
@@ -711,7 +824,7 @@ zh-TW:
     new_stock_movement: "新增庫存動向"
     new_stock_transfer: "新增庫存轉移"
     new_tax_category: "新增課稅分類"
-    new_tax_rate: "新增稅���"
+    new_tax_rate: "新增稅率"
     new_taxon: "新增分類"
     new_taxonomy: "新增分類"
     new_tracker:
@@ -729,7 +842,7 @@ zh-TW:
     no_rules_added: No rules added
     no_shipping_method_selected:
     no_state_changes:
-    no_tracking_present:
+    no_tracking_present: "無追蹤顯示"
     none: "沒有"
     none_selected:
     normal_amount: "一般數量"
@@ -803,7 +916,7 @@ zh-TW:
     order_total: "總金額"
     order_updated: "訂單已更新"
     orders: "訂單"
-    other_items_in_other:
+    other_items_in_other: "=待翻譯="
     out_of_stock: "缺貨中"
     overview: "總覽"
     package_from: "包裝自"
@@ -843,7 +956,7 @@ zh-TW:
     percent_per_item: "單件百分比"
     permalink: "永久連結"
     phone: "電話"
-    place_order: "落單"
+    place_order: "下單"
     please_define_payment_methods: "請先設定支付方式。"
     populate_get_error: "發生錯誤，請再添加項目。"
     powered_by: "技術支持"
@@ -1007,11 +1120,11 @@ zh-TW:
     roles: "角色"
     rules: "規則"
     safe:
-    sales_total:
-    sales_total_description:
-    sales_totals:
+    sales_total: "銷售總額"
+    sales_total_description: "銷售總額描述"
+    sales_totals: "銷售總額"
     save_and_continue: "儲存後繼續"
-    save_my_address:
+    save_my_address: "儲存我的地址資料"
     say_no: "不"
     say_yes: "是的"
     scope: "範圍"
@@ -1021,8 +1134,9 @@ zh-TW:
     secure_connection_type: "安全連線類型"
     security_settings: "安全設定"
     select: "選擇"
+    select_a_reason: "選擇一個原因"
     select_a_return_authorization_reason:
-    select_a_stock_location:
+    select_a_stock_location: "選擇一個庫存倉位"
     select_from_prototype: "從商品原型選擇"
     select_stock: "選擇庫存"
     send_copy_of_all_mails_to: "將所有郵件的副本發送至"
@@ -1034,8 +1148,8 @@ zh-TW:
     ship_address: "出貨地址"
     ship_total:
     shipment: "出貨資料"
-    shipment_adjustments:
-    shipment_details:
+    shipment_adjustments: "出貨調整"
+    shipment_details: "出貨細節"
     shipment_mailer:
       shipped_email:
         dear_customer: "親愛的顧客，"
@@ -1048,7 +1162,7 @@ zh-TW:
     shipment_state: "出貨狀態"
     shipment_states:
       backorder: "預購"
-      canceled:
+      canceled: "已取消"
       partial: "部份出貨"
       pending: "擱置"
       ready: "準備出貨"
@@ -1076,6 +1190,7 @@ zh-TW:
     show_deleted: "顯示被刪除的資料"
     show_only_complete_orders: "顯示已完成的訂單"
     show_only_considered_risky:
+    show_only_open_transfers: "顯示轉移中"
     show_rate_in_label:
     sku: "商品編號"
     skus:
@@ -1124,7 +1239,7 @@ zh-TW:
     states: "省份"
     states_required: "需要州別"
     status: "狀態"
-    stock:
+    stock: "庫存"
     stock_location: "庫存區域"
     stock_location_info: "庫存區域資訊"
     stock_locations: "庫存區域"
@@ -1142,13 +1257,13 @@ zh-TW:
     street_address_2: "地址(繼續)"
     subtotal: "小計"
     subtract: "減去"
-    success:
+    success: "成功"
     successfully_created: "建立%{resource}成功！"
     successfully_refunded:
     successfully_removed: "刪除%{resource}成功！"
     successfully_signed_up_for_analytics:
     successfully_updated: "更新%{resource}成功！"
-    summary:
+    summary: "匯總"
     tax: "稅"
     tax_categories: "課稅類別"
     tax_category: "課稅類別"
@@ -1190,7 +1305,7 @@ zh-TW:
     total: "總金額"
     total_per_item:
     total_pre_tax_refund:
-    total_price:
+    total_price: "總價"
     total_sales:
     track_inventory:
     tracking: "物流追蹤碼"
@@ -1199,7 +1314,7 @@ zh-TW:
     tracking_url_placeholder: "例如: http://quickship.com/package?num=:tracking"
     transaction_id:
     transfer_from_location:
-    transfer_stock:
+    transfer_stock: "轉移庫存"
     transfer_to_location:
     tree: "樹"
     type: "類型"
@@ -1213,7 +1328,7 @@ zh-TW:
     update: "更新"
     updating: "更新中"
     usage_limit: "使用次數限制"
-    use_app_default:
+    use_app_default: "使用APP預設"
     use_billing_address: "使用帳單地址"
     use_new_cc: "使用新卡"
     use_s3: Use Amazon S3 For Images
@@ -1231,7 +1346,9 @@ zh-TW:
       unpaid_amount_not_zero:
     value: "值"
     variant: "具體型號"
-    variant_placeholder: "選擇具体型号"
+    variant_placeholder: "選擇具體型号"
+    variant_search_placeholder: "選擇具體型号"
+    no_variants_found_try_again: "未找到型號請重試"
     variants: "款式系列"
     version: "版本"
     void: "無效"
@@ -1247,3 +1364,9 @@ zh-TW:
     zipcode: "區域代碼"
     zone: "區域"
     zones: "區域"
+    confirm_order: "確認訂單"
+    order_please_refresh: "請重整訂單"
+    order_refresh_totals: "訂單重整總數"
+    there_are_no_items_for_this_order: "訂單無任何項目"
+    store_credit:
+      store_credit: "店內的抵用額度"
